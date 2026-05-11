@@ -59,11 +59,31 @@ public class FastPreview {
     }
 
     private PreviewResult renderText(PreviewRequest request, long startTime) {
-        // Mock implementation for initial API proof
+        // For .java files, we use the Tokenizer
+        if (request.getSource().getName().endsWith(".java")) {
+            return renderCode(request, startTime);
+        }
+
+        // Standard text rendering
+        PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
+        buffer.clear(0xFF222222); 
+        return new PreviewResult(buffer, System.nanoTime() - startTime);
+    }
+
+    private PreviewResult renderCode(PreviewRequest request, long startTime) {
+        // FastTokenizer integration
+        fasttokenizer.CodeTokenizer tokenizer = new fasttokenizer.SimpleJavaTokenizer();
+        fasttokenizer.CodeTheme theme = new fasttokenizer.DefaultCodeTheme();
+        
+        // Simulating the pipeline:
+        // 1. Tokenize source
+        // 2. Map tokens to theme colors
+        // 3. Rasterize (for now just clear with a theme-related color)
+        
         PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
         
-        // Simulating Text/Code rendering (Dark gray background)
-        buffer.clear(0xFF222222); 
+        // Clear with background color from theme (mocked as dark gray)
+        buffer.clear(0xFF1E1E1E); 
         
         return new PreviewResult(buffer, System.nanoTime() - startTime);
     }
