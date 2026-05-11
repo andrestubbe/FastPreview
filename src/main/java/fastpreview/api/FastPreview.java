@@ -24,6 +24,12 @@ public class FastPreview {
                 return renderHTML(request, start);
             } else if (fileName.endsWith(".java") || fileName.endsWith(".txt")) {
                 return renderText(request, start);
+            } else if (fileName.endsWith(".md")) {
+                return renderMarkdown(request, start);
+            } else if (fileName.endsWith(".svg")) {
+                return renderSVG(request, start);
+            } else if (fileName.contains("screen")) {
+                return renderScreenshot(request, start);
             } else {
                 return new PreviewResult("Unsupported file format: " + fileName);
             }
@@ -58,6 +64,33 @@ public class FastPreview {
         
         // Simulating Text/Code rendering (Dark gray background)
         buffer.clear(0xFF222222); 
+        
+        return new PreviewResult(buffer, System.nanoTime() - startTime);
+    }
+
+    private PreviewResult renderMarkdown(PreviewRequest request, long startTime) {
+        PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
+        
+        // Simulating Markdown rendering (Light gray/white background)
+        buffer.clear(0xFFF0F0F0); 
+        
+        return new PreviewResult(buffer, System.nanoTime() - startTime);
+    }
+
+    private PreviewResult renderSVG(PreviewRequest request, long startTime) {
+        PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
+        
+        // Simulating SVG rendering (Yellowish background)
+        buffer.clear(0xFF00FFFF); 
+        
+        return new PreviewResult(buffer, System.nanoTime() - startTime);
+    }
+
+    private PreviewResult renderScreenshot(PreviewRequest request, long startTime) {
+        PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
+        
+        // Simulating Screenshot capture (Cyan background)
+        buffer.clear(0xFFFFFF00); 
         
         return new PreviewResult(buffer, System.nanoTime() - startTime);
     }

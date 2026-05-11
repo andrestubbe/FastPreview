@@ -1,4 +1,4 @@
-# FastPreview — High-Performance Content Rendering for Java
+# FastPreview — High-Performance Content Rendering for Java [v0.1.0]
 
 **Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
