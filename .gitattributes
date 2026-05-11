@@ -1,0 +1,13 @@
+# Standard text file handling
+* text=auto
+
+# Ensure batch files use CRLF
+*.bat text eol=crlf
+
+# Ensure native source files use LF (standard for JNI/C++)
+*.cpp text eol=lf
+*.h text eol=lf
+*.def text eol=lf
+
+# Documentation
+*.md text
