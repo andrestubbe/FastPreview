@@ -69,6 +69,13 @@ FastJava modules require **two** dependencies: the module itself, and `FastCore`
 
 ### Maven (JitPack)
 ```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
 <dependencies>
     <!-- 1. FastPreview Module -->
     <dependency>
