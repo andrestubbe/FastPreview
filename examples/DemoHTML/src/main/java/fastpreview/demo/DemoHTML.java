@@ -10,7 +10,7 @@ public class DemoHTML {
         System.out.println("FastPreview - HTML Demo");
         
         FastPreview preview = new FastPreview();
-        PreviewRequest request = new PreviewRequest(new File("example.html"), 1024, 768);
+        PreviewRequest request = new PreviewRequest(new File("../assets/example.html"), 1024, 768);
         
         PreviewResult result = preview.render(request);
         

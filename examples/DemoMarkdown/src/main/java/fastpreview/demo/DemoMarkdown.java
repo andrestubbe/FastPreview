@@ -10,7 +10,7 @@ public class DemoMarkdown {
         System.out.println("FastPreview - Markdown Demo");
         
         FastPreview preview = new FastPreview();
-        PreviewRequest request = new PreviewRequest(new File("README.md"), 800, 1000);
+        PreviewRequest request = new PreviewRequest(new File("../../README.md"), 800, 1000);
         
         PreviewResult result = preview.render(request);
         

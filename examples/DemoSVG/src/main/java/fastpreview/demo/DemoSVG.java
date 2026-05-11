@@ -10,7 +10,7 @@ public class DemoSVG {
         System.out.println("FastPreview - SVG Demo");
         
         FastPreview preview = new FastPreview();
-        PreviewRequest request = new PreviewRequest(new File("icon.svg"), 512, 512);
+        PreviewRequest request = new PreviewRequest(new File("../assets/icon.svg"), 512, 512);
         
         PreviewResult result = preview.render(request);
         

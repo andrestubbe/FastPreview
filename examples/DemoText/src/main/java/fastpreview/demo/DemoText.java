@@ -10,7 +10,7 @@ public class DemoText {
         System.out.println("FastPreview - Text Demo");
         
         FastPreview preview = new FastPreview();
-        PreviewRequest request = new PreviewRequest(new File("LICENSE"), 800, 600);
+        PreviewRequest request = new PreviewRequest(new File("../../LICENSE"), 800, 600);
         
         PreviewResult result = preview.render(request);
         

@@ -10,7 +10,7 @@ public class DemoPDF {
         System.out.println("FastPreview - PDF Demo");
         
         FastPreview preview = new FastPreview();
-        PreviewRequest request = new PreviewRequest(new File("example.pdf"), 800, 600);
+        PreviewRequest request = new PreviewRequest(new File("../assets/example.pdf"), 800, 600);
         
         PreviewResult result = preview.render(request);
         
