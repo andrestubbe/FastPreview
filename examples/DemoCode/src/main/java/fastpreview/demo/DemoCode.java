@@ -10,7 +10,6 @@ public class DemoCode {
         System.out.println("FastPreview - Code Demo");
         
         FastPreview preview = new FastPreview();
-        // For now, we use a .java file to trigger code rendering logic (to be implemented)
         PreviewRequest request = new PreviewRequest(new File("DemoCode.java"), 800, 1200);
         
         PreviewResult result = preview.render(request);
