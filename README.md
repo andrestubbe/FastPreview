@@ -2,12 +2,6 @@
 
 **Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
-[![Build](https://img.shields.io/github/actions/workflow/status/andrestubbe/FastPreview/maven.yml?branch=main)](https://github.com/andrestubbe/FastPreview/actions)
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![JitPack](https://jitpack.io/v/andrestubbe/FastPreview.svg)](https://jitpack.io/#andrestubbe/FastPreview)
-
 FastPreview provides **high-speed content rasterization** for Java applications. It delivers off-heap pixel buffers directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
 
 ```java
@@ -29,6 +23,12 @@ public class Demo {
     }
 }
 ```
+
+[![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastPreview/releases/tag/v0.1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
+[![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
 ---
 
