@@ -1,4 +1,4 @@
-﻿# FastPreview â€” High-Performance Content Rendering for Java [v0.1.0]
+﻿# FastPreview — High-Performance Content Rendering for Java [v0.1.0]
 
 **Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
@@ -11,7 +11,7 @@
 FastPreview provides **high-speed content rasterization** for Java applications. It delivers off-heap pixel buffers directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
 
 ```java
-// Quick Start â€” Render a PDF page to FastImage
+// Quick Start — Render a PDF page to FastImage
 import fastpreview.api.FastPreview;
 import fastpreview.api.PreviewRequest;
 import fastpreview.api.PreviewResult;
@@ -47,17 +47,17 @@ public class Demo {
 
 ## Key Features
 
-- **ðŸš€ Native Performance** â€” Direct integration with PDFium, WebView2, and Skia.
-- **âš¡ Zero-Copy** â€” Off-heap pixel buffers delivered directly to FastImage.
-- **ðŸ“¦ Modular Backends** â€” Pluggable support for PDF, HTML, Markdown, and more.
-- **ðŸŽ¯ Deterministic** â€” Predictable rendering times for batch processing.
+- **🚀 Native Performance** — Direct integration with PDFium, WebView2, and Skia.
+- **⚡ Zero-Copy** — Off-heap pixel buffers delivered directly to FastImage.
+- **📦 Modular Backends** — Pluggable support for PDF, HTML, Markdown, and more.
+- **🎯 Deterministic** — Predictable rendering times for batch processing.
 
 ---
 
 ## Architecture
 
 FastPreview follows a strict pipeline:
-`Content â†’ Layout â†’ Rasterization â†’ PixelBuffer â†’ FastImage`
+`Content → Layout → Rasterization → PixelBuffer → FastImage`
 
 For more details, see [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -127,12 +127,12 @@ Download the latest JARs directly to add them to your classpath:
 
 | Content Type | Backend | Status |
 |--------------|---------|--------|
-| PDF | PDFium | ðŸš§ Integrating |
-| HTML | WebView2 | ðŸš§ Integrating |
-| Code | Syntax + FastTheme | âœ… Skeleton |
-| Text | DirectWrite | ðŸš§ Planned |
-| Markdown | Custom AST Renderer | ðŸš§ Planned |
-| SVG | Skia | ðŸš§ Planned |
+| PDF | PDFium | 🚧 Integrating |
+| HTML | WebView2 | 🚧 Integrating |
+| Code | Syntax + FastTheme | ✅ Skeleton |
+| Text | DirectWrite | 🚧 Planned |
+| Markdown | Custom AST Renderer | 🚧 Planned |
+| SVG | Skia | 🚧 Planned |
 
 ---
 
@@ -140,9 +140,9 @@ Download the latest JARs directly to add them to your classpath:
 
 | Platform | Status |
 |----------|--------|
-| Windows 10/11 (x64) | âœ… Fully Supported |
-| Linux | ðŸš§ Planned |
-| macOS | ðŸš§ Planned |
+| Windows 10/11 (x64) | ✅ Fully Supported |
+| Linux | 🚧 Planned |
+| macOS | 🚧 Planned |
 
 ---
 
@@ -153,17 +153,17 @@ For detailed instructions on compiling the C++ JNI code and building the Maven F
 ---
 
 ## License
-MIT License â€” See [LICENSE](LICENSE) file for details.
+MIT License — See [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Related Projects
-- [FastImage](https://github.com/andrestubbe/FastImage) â€” High-performance image processing
-- [FastCore](https://github.com/andrestubbe/FastCore) â€” Native Library Loader for Java
-- [FastTheme](https://github.com/andrestubbe/FastTheme) â€” Unified styling and colors
+- [FastImage](https://github.com/andrestubbe/FastImage) — High-performance image processing
+- [FastCore](https://github.com/andrestubbe/FastCore) — Native Library Loader for Java
+- [FastTheme](https://github.com/andrestubbe/FastTheme) — Unified styling and colors
 
 ---
-**Made with âš¡ by Andre Stubbe**
+**Made with ⚡ by Andre Stubbe**
 
 <!-- 
 SEO Keywords: java, jni, native, fastpreview, pdfium, webview2, skia, rendering, performance
