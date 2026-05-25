@@ -1,6 +1,6 @@
 @echo off
 echo Building FastPreview...
-call mvn clean package -DskipTests
+call mvn -q clean package -DskipTests
 if %ERRORLEVEL% NEQ 0 (
     echo.
     echo ❌ Maven build failed.
@@ -11,6 +11,6 @@ if %ERRORLEVEL% NEQ 0 (
 echo.
 echo Running DemoPDF...
 cd examples\DemoPDF
-call mvn compile exec:java
+call mvn -q compile exec:java
 cd ..\..
 pause
