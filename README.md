@@ -6,10 +6,14 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
 [![JitPack](https://img.shields.io/badge/JitPack-ready-green.svg)](https://jitpack.io/#andrestubbe)
 
+---
+
 **⚡ Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
 FastPreview provides **high-speed content rasterization** for Java applications. It delivers off-heap pixel buffers
 directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
+
+---
 
 [![FastKeyboard Showcase](docs/screenshot.png)](https://www.youtube.com/watch?v=BZsqQl7WqWk)
 
