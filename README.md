@@ -13,9 +13,25 @@ directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
 
 [![FastKeyboard Showcase](docs/screenshot.png)](https://www.youtube.com/watch?v=BZsqQl7WqWk)
 
-```java
-// Quick Start — Render a PDF page to FastImage
+---
 
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Try the Demo](#try-the-demo)
+- [Backends](#backends)
+- [Platform Support](#platform-support)
+- [Building from Source](#building-from-source)
+- [License](#license)
+- [Related Projects](#related-projects)
+
+---
+
+## Quick Start
+
+```java
 import fastpreview.api.FastPreview;
 import fastpreview.api.PreviewRequest;
 import fastpreview.api.PreviewResult;
@@ -33,20 +49,6 @@ public class Demo {
     }
 }
 ```
-
----
-
-## Table of Contents
-
-- [Key Features](#key-features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Try the Demo](#try-the-demo)
-- [Backends](#backends)
-- [Platform Support](#platform-support)
-- [Building from Source](#building-from-source)
-- [License](#license)
-- [Related Projects](#related-projects)
 
 ---
 
