@@ -50,6 +50,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.0</version>
@@ -61,6 +67,7 @@
         <resources>
             <resource>
                 <directory>build</directory>
+                <targetPath>native</targetPath>
                 <includes>
                     <include>*.dll</include>
                 </includes>

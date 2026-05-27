@@ -39,15 +39,19 @@ call "%VS_PATH%\VC\Auxiliary\Build\vcvars64.bat"
 :: Create build directory
 if not exist build mkdir build
 
-:: Compile C++ source
+:: Compile C++ source linked against PDFium
 cl.exe /O2 /W3 /MD /EHsc /LD ^
    /I "%JAVA_HOME%\include" ^
    /I "%JAVA_HOME%\include\win32" ^
+   /I "native\pdfium\include" ^
    /Fo:build\ ^
    /Fe:build\%LIB_NAME%.dll ^
    native\*.cpp ^
    user32.lib gdi32.lib ^
-   /link /DLL /MACHINE:X64
+   /link /LIBPATH:"native\pdfium\lib" pdfium.dll.lib /DLL /MACHINE:X64
+
+:: Copy pdfium.dll to the build directory next to fastpreview.dll
+copy /Y "native\pdfium\bin\pdfium.dll" "build\pdfium.dll" > nul
 
 if %ERRORLEVEL% == 0 (
     echo.

@@ -24,8 +24,11 @@
             <groupId>com.github.andrestubbe</groupId>
             <artifactId>fastpreview</artifactId>
             <version>0.1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/../../target/fastpreview-0.1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 
