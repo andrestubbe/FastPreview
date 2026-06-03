@@ -1,4 +1,4 @@
-﻿# FastPreview v0.1.0 [ALPHA] — High-Performance Content Rendering for Java
+# FastPreview v0.1.0 [ALPHA] � High-Performance Content Rendering for Java
 
 [![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastPreview/releases/tag/v0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,7 +8,7 @@
 
 ---
 
-**⚡ Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
+**? Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
 FastPreview provides **high-speed content rasterization** for Java applications. It delivers off-heap pixel buffers
 directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
@@ -58,17 +58,17 @@ public class Demo {
 
 ## Key Features
 
-- **🚀 Native Performance** — Direct integration with PDFium, WebView2, and Skia.
-- **⚡ Zero-Copy** — Off-heap pixel buffers delivered directly to FastImage.
-- **📦 Modular Backends** — Pluggable support for PDF, HTML, Markdown, and more.
-- **🎯 Deterministic** — Predictable rendering times for batch processing.
+- **?? Native Performance** � Direct integration with PDFium, WebView2, and Skia.
+- **? Zero-Copy** � Off-heap pixel buffers delivered directly to FastImage.
+- **?? Modular Backends** � Pluggable support for PDF, HTML, Markdown, and more.
+- **?? Deterministic** � Predictable rendering times for batch processing.
 
 ---
 
 ## Architecture
 
 FastPreview follows a strict pipeline:
-`Content → Layout → Rasterization → PixelBuffer → FastImage`
+`Content ? Layout ? Rasterization ? PixelBuffer ? FastImage`
 
 For more details, see [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -123,10 +123,10 @@ dependencies {
 
 Download the latest JARs directly to add them to your classpath:
 
-1. 📦 *
+1. ?? *
    *[fastpreview-v0.1.0.jar](https://github.com/andrestubbe/FastPreview/releases/download/v0.1.0/fastpreview-v0.1.0.jar)
    ** (The Core Library)
-2. ⚙️ **[fastcore-v0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/v0.1.0/fastcore-v0.1.0.jar)** (
+2. ?? **[fastcore-v0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/v0.1.0/fastcore-v0.1.0.jar)** (
    The Mandatory Native Loader)
 
 ---
@@ -135,12 +135,12 @@ Download the latest JARs directly to add them to your classpath:
 
 | Content Type | Backend             | Status         |
 |--------------|---------------------|----------------|
-| PDF          | PDFium              | 🚧 Integrating |
-| HTML         | WebView2            | 🚧 Integrating |
-| Code         | Syntax + FastTheme  | ✅ Skeleton     |
-| Text         | DirectWrite         | 🚧 Planned     |
-| Markdown     | Custom AST Renderer | 🚧 Planned     |
-| SVG          | Skia                | 🚧 Planned     |
+| PDF          | PDFium              | ?? Integrating |
+| HTML         | WebView2            | ?? Integrating |
+| Code         | Syntax + FastTheme  | ? Skeleton     |
+| Text         | DirectWrite         | ?? Planned     |
+| Markdown     | Custom AST Renderer | ?? Planned     |
+| SVG          | Skia                | ?? Planned     |
 
 ---
 
@@ -148,7 +148,7 @@ Download the latest JARs directly to add them to your classpath:
 
 * **[COMPILE.md](docs/COMPILE.md)**: Full compilation guide (MSVC C++17 build chain + JNI Setup).
 * **[REFERENCE.md](docs/REFERENCE.md)**: Full API descriptions, border configurations, and codepoint index.
-* **[PHILOSOPHIE.md](PHILOSOPHIE.md)**: The engineering rationale for zero-allocation performance.
+* **[PHILOSOPHY.md](PHILOSOPHY.md)**: The engineering rationale for zero-allocation performance.
 * **[ROADMAP.md](docs/ROADMAP.md)**: Future milestones and planned features.
 
 ---
@@ -157,15 +157,15 @@ Download the latest JARs directly to add them to your classpath:
 
 | Platform      | Status            |
 |---------------|-------------------|
-| Windows 10/11 | ✅ Fully Supported |
-| Linux         | 🚧 Planned        |
-| macOS         | 🚧 Planned        |
+| Windows 10/11 | ? Fully Supported |
+| Linux         | ?? Planned        |
+| macOS         | ?? Planned        |
 
 ---
 
 ## License
 
-MIT License — See [LICENSE](LICENSE) file for details.
+MIT License � See [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -178,7 +178,7 @@ MIT License — See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Part of the FastJava Ecosystem** — *Making the JVM faster. Small package. Maximum speed. Zero bloat. 🚀📋*
+**Part of the FastJava Ecosystem** � *Making the JVM faster. Small package. Maximum speed. Zero bloat. ????*
 
 
 
