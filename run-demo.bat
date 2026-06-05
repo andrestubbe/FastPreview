@@ -1,4 +1,6 @@
-﻿@echo off
+@echo off
+chcp 65001 >nul
+cd /d "%~dp0"
 echo Building FastPreview...
     echo.
     echo âŒ Maven build failed.
@@ -9,6 +11,6 @@ echo Building FastPreview...
 echo.
 echo Running DemoPDF...
 cd examples\DemoPDF
-call mvn -q compile exec:java
+call mvn compile exec:java
 cd ..\..
 pause

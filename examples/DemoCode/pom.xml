@@ -7,7 +7,7 @@
 
     <groupId>fastpreview.examples</groupId>
     <artifactId>demo-code</artifactId>
-    <version>0.1.0</version>
+    <version>v0.1.0</version>
     <packaging>jar</packaging>
 
     <name>FastPreview - Code Demo</name>
@@ -29,8 +29,8 @@
     <dependencies>
         <dependency>
             <groupId>com.github.andrestubbe</groupId>
-            <artifactId>fastpreview</artifactId>
-            <version>0.1.0</version>
+            <artifactId>FastPreview</artifactId>
+            <version>v0.1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/../../target/fastpreview-0.1.0.jar</systemPath>
         </dependency>
