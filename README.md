@@ -1,6 +1,6 @@
-# FastPreview v0.1.0 [ALPHA] � High-Performance Content Rendering for Java
+# FastPreview 0.1.0 [ALPHA]  High-Performance Content Rendering for Java
 
-[![Status](https://img.shields.io/badge/status-v0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastPreview/releases/tag/v0.1.0)
+[![Status](https://img.shields.io/badge/status-0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastPreview/releases/tag/0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
@@ -8,7 +8,7 @@
 
 ---
 
-**? Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
+**âš¡ Lightweight native rendering capabilities for PDF, HTML, Code, Text, Markdown, and SVG.**
 
 FastPreview provides **high-speed content rasterization** for Java applications. It delivers off-heap pixel buffers
 directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
@@ -58,10 +58,10 @@ public class Demo {
 
 ## Key Features
 
-- **?? Native Performance** � Direct integration with PDFium, WebView2, and Skia.
-- **? Zero-Copy** � Off-heap pixel buffers delivered directly to FastImage.
-- **?? Modular Backends** � Pluggable support for PDF, HTML, Markdown, and more.
-- **?? Deterministic** � Predictable rendering times for batch processing.
+- **ðŸš€ Native Performance**  Direct integration with PDFium, WebView2, and Skia.
+- **? Zero-Copy**  Off-heap pixel buffers delivered directly to FastImage.
+- **ðŸš€ Modular Backends**  Pluggable support for PDF, HTML, Markdown, and more.
+- **ðŸš€ Deterministic**  Predictable rendering times for batch processing.
 
 ---
 
@@ -94,14 +94,14 @@ Add the JitPack repository and the dependencies to your `pom.xml`:
 <dependency>
     <groupId>com.github.andrestubbe</groupId>
     <artifactId>fastpreview</artifactId>
-    <version>v0.1.0</version>
+    <version>0.1.0</version>
 </dependency>
 
 <!-- FastCore (Required Native Loader) -->
 <dependency>
     <groupId>com.github.andrestubbe</groupId>
     <artifactId>fastcore</artifactId>
-    <version>v0.1.0</version>
+    <version>0.1.0</version>
 </dependency>
 </dependencies>
 ```
@@ -114,8 +114,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.andrestubbe:fastpreview:v0.1.0'
-    implementation 'com.github.andrestubbe:fastcore:v0.1.0'
+    implementation 'com.github.andrestubbe:fastpreview:0.1.0'
+    implementation 'com.github.andrestubbe:fastcore:0.1.0'
 }
 ```
 
@@ -123,10 +123,10 @@ dependencies {
 
 Download the latest JARs directly to add them to your classpath:
 
-1. ?? *
-   *[fastpreview-v0.1.0.jar](https://github.com/andrestubbe/FastPreview/releases/download/v0.1.0/fastpreview-v0.1.0.jar)
+1. ðŸš€ *
+   *[fastpreview-0.1.0.jar](https://github.com/andrestubbe/FastPreview/releases/download/0.1.0/fastpreview-0.1.0.jar)
    ** (The Core Library)
-2. ?? **[fastcore-v0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/v0.1.0/fastcore-v0.1.0.jar)** (
+2. ðŸš€ **[fastcore-0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/0.1.0/fastcore-0.1.0.jar)** (
    The Mandatory Native Loader)
 
 ---
@@ -135,12 +135,12 @@ Download the latest JARs directly to add them to your classpath:
 
 | Content Type | Backend             | Status         |
 |--------------|---------------------|----------------|
-| PDF          | PDFium              | ?? Integrating |
-| HTML         | WebView2            | ?? Integrating |
+| PDF          | PDFium              | ðŸš€ Integrating |
+| HTML         | WebView2            | ðŸš€ Integrating |
 | Code         | Syntax + FastTheme  | ? Skeleton     |
-| Text         | DirectWrite         | ?? Planned     |
-| Markdown     | Custom AST Renderer | ?? Planned     |
-| SVG          | Skia                | ?? Planned     |
+| Text         | DirectWrite         | ðŸš€ Planned     |
+| Markdown     | Custom AST Renderer | ðŸš€ Planned     |
+| SVG          | Skia                | ðŸš€ Planned     |
 
 ---
 
@@ -158,14 +158,14 @@ Download the latest JARs directly to add them to your classpath:
 | Platform      | Status            |
 |---------------|-------------------|
 | Windows 10/11 | ? Fully Supported |
-| Linux         | ?? Planned        |
-| macOS         | ?? Planned        |
+| Linux         | ðŸš€ Planned        |
+| macOS         | ðŸš€ Planned        |
 
 ---
 
 ## License
 
-MIT License � See [LICENSE](LICENSE) file for details.
+MIT License  See [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -178,7 +178,7 @@ MIT License � See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Part of the FastJava Ecosystem** � *Making the JVM faster. Small package. Maximum speed. Zero bloat. ????*
+**Part of the FastJava Ecosystem**  *Making the JVM faster. Small package. Maximum speed. Zero bloat. ðŸš€ðŸš€*
 
 
 
