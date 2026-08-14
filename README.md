@@ -19,20 +19,6 @@ directly to `FastImage`, bypassing the overhead of traditional UI frameworks.
 
 ---
 
-## Table of Contents
-
-- [Key Features](#key-features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Try the Demo](#try-the-demo)
-- [Backends](#backends)
-- [Platform Support](#platform-support)
-- [Building from Source](#building-from-source)
-- [License](#license)
-- [Related Projects](#related-projects)
-
----
-
 ## Quick Start
 
 ```java
@@ -55,6 +41,23 @@ public class Demo {
 ```
 
 ---
+
+---
+
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Try the Demo](#try-the-demo)
+- [Backends](#backends)
+- [Platform Support](#platform-support)
+- [Building from Source](#building-from-source)
+- [License](#license)
+- [Related Projects](#related-projects)
+
+---
+
 
 ## Key Features
 
