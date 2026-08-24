@@ -1,0 +1,9 @@
+fastpreview\benchmark\Benchmark.class
+fastpreview\benchmark\jmh_generated\Benchmark_benchmarkEncode100PreviewRecords_jmhTest.class
+fastpreview\benchmark\jmh_generated\Benchmark_jmhType_B2.class
+META-INF\BenchmarkList
+fastpreview\benchmark\jmh_generated\Benchmark_benchmarkDecode100PreviewRecords_jmhTest.class
+fastpreview\benchmark\jmh_generated\Benchmark_jmhType_B3.class
+META-INF\CompilerHints
+fastpreview\benchmark\jmh_generated\Benchmark_jmhType.class
+fastpreview\benchmark\jmh_generated\Benchmark_jmhType_B1.class
