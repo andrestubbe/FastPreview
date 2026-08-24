@@ -118,6 +118,16 @@ FastPreview is profiled using **JMH** to guarantee zero bottleneck during high-c
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastPreview</artifactId>
+        <version>0.1.1</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.andrestubbe</groupId>
+        <artifactId>FastTokenize</artifactId>
+        <version>0.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.andrestubbe</groupId>
+        <artifactId>FastThumb</artifactId>
         <version>0.1.0</version>
     </dependency>
     <dependency>
@@ -146,7 +156,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.andrestubbe:FastPreview:0.1.0'
+    implementation 'com.github.andrestubbe:FastPreview:0.1.1'
+    implementation 'com.github.andrestubbe:FastTokenize:0.1.0'
+    implementation 'com.github.andrestubbe:FastThumb:0.1.0'
     implementation 'com.github.andrestubbe:FastImage:0.1.1'
     implementation 'com.github.andrestubbe:FastFileFormat:0.1.0'
     implementation 'com.github.andrestubbe:FastCore:0.1.0'
@@ -157,10 +169,12 @@ dependencies {
 
 Download the latest JARs directly to add them to your classpath:
 
-1. 📄 **[FastPreview-0.1.0.jar](https://github.com/andrestubbe/FastPreview/releases/download/0.1.0/FastPreview-0.1.0.jar)** (Document Preview Engine)
-2. ⚡ **[FastImage-0.1.1.jar](https://github.com/andrestubbe/FastImage/releases/download/0.1.1/FastImage-0.1.1.jar)** (Zero-Copy Image Manipulation)
-3. 📄 **[FastFileFormat-0.1.0.jar](https://github.com/andrestubbe/FastFileFormat/releases/download/0.1.0/FastFileFormat-0.1.0.jar)** (Dual Binary & Text File Format)
-4. ⚙️ **[FastCore-0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/0.1.0/FastCore-0.1.0.jar)** (Foundation Library)
+1. 📄 **[FastPreview-0.1.1.jar](https://github.com/andrestubbe/FastPreview/releases/download/0.1.1/FastPreview-0.1.1.jar)** (Document Preview Engine)
+2. ⚡ **[FastTokenize-0.1.0.jar](https://github.com/andrestubbe/FastTokenize/releases/download/0.1.0/FastTokenize-0.1.0.jar)** (Zero-Copy Syntax Scanner)
+3. 🖼️ **[FastThumb-0.1.0.jar](https://github.com/andrestubbe/FastThumb/releases/download/0.1.0/FastThumb-0.1.0.jar)** (Shell Thumbnail Extractor)
+4. 🎨 **[FastImage-0.1.1.jar](https://github.com/andrestubbe/FastImage/releases/download/0.1.1/FastImage-0.1.1.jar)** (Zero-Copy Image Manipulation)
+5. 📄 **[FastFileFormat-0.1.0.jar](https://github.com/andrestubbe/FastFileFormat/releases/download/0.1.0/FastFileFormat-0.1.0.jar)** (Dual Binary & Text File Format)
+6. ⚙️ **[FastCore-0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/0.1.0/FastCore-0.1.0.jar)** (Foundation Library)
 
 ---
 
