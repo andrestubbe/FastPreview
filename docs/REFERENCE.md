@@ -1,26 +1,26 @@
-# FastPreview Reference
+# FastPreview Reference Guide
 
-## 1. CPU Feature Model
-*   **AVX2** — detected via CPUID. Enables 32-byte vector ops.
-*   **SSE4.2** — detected via CPUID. 16-byte fallback.
-*   **Fallback rule**: AVX2 → SSE4.2 → scalar.
+## API Overview
 
-## 2. Guarantees
-*   **Zero-Copy**: All operations use `GetPrimitiveArrayCritical` for direct memory access.
-*   **Unaligned Access**: Safe on all byte boundaries.
-*   **Thread-Safety**: All static native methods are thread-safe.
+`fastpreview.api.FastPreview` provides unified high-performance multi-engine rendering for PDFs, Markdown, HTML, and source code.
 
-## 3. JNI & Memory Contracts
-*   **Direct Memory Pinning**: No implicit copies are made by the JNI bridge.
-*   **No Allocation**: All operations work on pre-allocated Java arrays or buffers.
-*   **Critical Sections**: Native calls minimize blocking to prevent GC impact.
+### Core Methods
 
-## 4. Platform Support
-| Platform | Status |
-|----------|--------|
-| Windows 10/11 (x64) | ✅ Fully Supported |
+| Method | Return | Description |
+| :--- | :--- | :--- |
+| `FastPreview.renderWithThumbnailFallback(File file, int w, int h)` | `PreviewResult` | Two-stage OS UI pipeline: FastThumb instant Shell preview first, falls back to full FastPreview render. |
+| `FastPreview.render(PreviewRequest request)` | `PreviewResult` | Renders a preview using the default PDFBOX backend. |
+| `FastPreview.render(PreviewRequest request, PreviewBackend backend)` | `PreviewResult` | Renders a preview with an explicit backend (PDFBOX or NATIVE). |
 
 ---
-**Part of the FastJava Ecosystem** — *Making the JVM faster.*
 
-Made with ⚡ by Andre Stubbe
+## Codec & Binary Serialization
+
+`fastpreview.api.PreviewCodec` provides serialization of rendered preview metadata records into FastFileFormat `.previewbin` binaries (Payload ID `0x0009`).
+
+| Method | Return | Description |
+| :--- | :--- | :--- |
+| `PreviewCodec.encode(List<PreviewRecord> records)` | `byte[]` | Encodes records to compressed `.previewbin` byte array. |
+| `PreviewCodec.decode(byte[] bytes)` | `List<PreviewRecord>` | Deserializes `.previewbin` payload back to `PreviewRecord` list. |
+| `PreviewCodec.writeToFile(Path path, List<PreviewRecord> records)` | `void` | Writes binary metadata cache directly to disk. |
+| `PreviewCodec.readFromFile(Path path)` | `List<PreviewRecord>` | Reads binary metadata cache from disk. |
