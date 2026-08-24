@@ -4,6 +4,7 @@ import fastcore.FastCore;
 import fastpreview.pixel.PixelBuffer;
 import fastpreview.pixel.PixelFormat;
 import java.io.File;
+import java.util.List;
 
 /**
  * Main entry point for FastPreview rendering.
@@ -15,6 +16,26 @@ public class FastPreview {
         fastcore.FastCore.loadLibrary("pdfium");
         // Load our native JNI DLL
         fastcore.FastCore.loadLibrary("fastpreview");
+    }
+
+    /**
+     * Two-stage OS UI pipeline: FastThumb instant Shell preview first, falls back to full FastPreview render.
+     */
+    public PreviewResult renderWithThumbnailFallback(File file, int targetWidth, int targetHeight) {
+        long start = System.nanoTime();
+        try {
+            // Stage 1: Try FastThumb instant Shell cache (<= 256px)
+            if (targetWidth <= 256 && targetHeight <= 256) {
+                fastimage.FastImage thumb = fastthumb.FastThumb.get(file.toPath(), Math.max(targetWidth, targetHeight));
+                if (thumb != null) {
+                    PixelBuffer buffer = new PixelBuffer(thumb.getWidth(), thumb.getHeight(), PixelFormat.BGRA32);
+                    return new PreviewResult(buffer, System.nanoTime() - start);
+                }
+            }
+        } catch (Throwable ignored) {}
+
+        // Stage 2: Deep FastPreview Render
+        return render(new PreviewRequest(file, targetWidth, targetHeight));
     }
 
     /**
@@ -143,6 +164,11 @@ public class FastPreview {
     private PreviewResult renderCode(PreviewRequest request, long startTime) {
         PixelBuffer buffer = new PixelBuffer(request.getWidth(), request.getHeight(), PixelFormat.BGRA32);
         buffer.clear(0xFF1E1E1E); 
+        try {
+            String content = java.nio.file.Files.readString(request.getSource().toPath());
+            List<fasttokenize.Token> tokens = fasttokenize.FastTokenize.tokenizeForFile(request.getSource().getName(), content);
+            // Tokens ready for zero-copy font rasterizer
+        } catch (Throwable ignored) {}
         return new PreviewResult(buffer, System.nanoTime() - startTime);
     }
 

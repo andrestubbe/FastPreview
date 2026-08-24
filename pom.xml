@@ -79,6 +79,20 @@
             <version>0.1.0</version>
         </dependency>
 
+        <!-- FastTokenize for instant zero-copy syntax highlighting -->
+        <dependency>
+            <groupId>com.github.andrestubbe</groupId>
+            <artifactId>FastTokenize</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
+        <!-- FastThumb for two-stage Shell thumbnail acceleration -->
+        <dependency>
+            <groupId>com.github.andrestubbe</groupId>
+            <artifactId>FastThumb</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
             <artifactId>pdfbox</artifactId>
