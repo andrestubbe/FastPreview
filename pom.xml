@@ -69,14 +69,14 @@
         <dependency>
             <groupId>com.github.andrestubbe</groupId>
             <artifactId>FastBinary</artifactId>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </dependency>
 
         <!-- FastFileFormat -->
         <dependency>
             <groupId>com.github.andrestubbe</groupId>
             <artifactId>FastFileFormat</artifactId>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </dependency>
 
         <!-- FastTokenize for instant zero-copy syntax highlighting -->
@@ -90,7 +90,7 @@
         <dependency>
             <groupId>com.github.andrestubbe</groupId>
             <artifactId>FastThumb</artifactId>
-            <version>0.1.0</version>
+            <version>fc39d5c3ecddcefb1e460e12b9dc020a6c04d5fb</version>
         </dependency>
 
         <dependency>
