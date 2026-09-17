@@ -51,6 +51,45 @@ public class Demo {
 
 ---
 
+## Table of Contents
+
+- [Why FastPreview?](#why-fastpreview)
+- [Quick Start](#quick-start)
+- [Key Features](#key-features)
+- [Real-World Scenarios](#real-world-scenarios)
+- [Performance Benchmarks](#performance-benchmarks)
+- [API Quick Reference](#api-quick-reference)
+- [Technical Examples & Hero Demos](#technical-examples--hero-demos)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Platform Support](#platform-support)
+- [License](#license)
+- [Related Projects](#related-projects)
+
+---
+
+## Why FastPreview?
+
+Generating instant file previews (PDFs, Markdown, syntax-highlighted source code, HTML) inside Java desktop applications is typically plagued by sluggish UI stutters:
+
+- **Heavy UI Framework Overhead** — Embedding JavaFX `WebView` or Swing document components consumes 100–300 MB of RAM per viewport and stalls the UI thread during initialization.
+- **Slow Pure-Java PDF Rasterization** — Java-based PDF libraries (like vanilla PDFBox) allocate massive intermediate `BufferedImage` objects, taking 150–600 ms per page render.
+- **Uncached Repetitive Rendering** — Repeatedly opening directory files forces re-rendering from scratch instead of fetching pre-rasterized OS Shell cache entries.
+- **Slow Disk Serialization** — Storing rendered preview caches as PNG/JPEG files introduces image compression and decompression CPU bottlenecks.
+
+FastPreview resolves this by combining a two-stage rendering pipeline (instant `FastThumb` Windows Shell cache fallback + native C++ Google PDFium acceleration) with direct zero-copy `PixelBuffer` outputs and high-speed `.previewbin` VarInt binary streaming.
+
+| Feature | Swing `JEditorPane` / Batik | Apache PDFBox (Pure Java) | FastPreview |
+|:---|:---|:---|:---|
+| **Rendering Core** | Heavy Swing / Java2D | Software Java rasterizer | **Native Google PDFium + FastThumb** |
+| **PDF Render Time (1080p)**| N/A | 150–500 ms per page | **15–40 ms (PDFium Native)** |
+| **Memory Footprint** | 80–250 MB per pane | High heap allocation churn | **Direct Off-Heap `PixelBuffer`** |
+| **Thumbnail Fallback** | Manual disk cache | None (Always full render) | **Instant FastThumb Shell Cache (< 1 ms)** |
+| **Metadata Cache Speed** | Slow JSON/XML parsing | Disk image I/O | **> 160M records/s (`.previewbin`)** |
+| **Dependencies** | Bulky desktop framework | Standalone Java library | **Pure Java 17+ backed by FastCore** |
+
+---
+
 ## Key Features
 
 - **📄 Multi-Engine Document Rendering** — Hybrid PDF rendering supporting both native PDFium and Apache PDFBox 3.0.
